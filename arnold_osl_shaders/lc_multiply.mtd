@@ -1,0 +1,8 @@
+# Arnold MetaData File 
+[node lc_multiply]
+	maya.name STRING "lc_multiply"
+	maya.id INT 0x70000017
+	maya.classification STRING "utility/lc_shaders"
+	desc STRING "LCA Math Shader Library" 
+	[attr input1]    desc STRING "" 
+	[attr input2]    desc STRING ""

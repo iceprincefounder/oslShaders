@@ -1,0 +1,25 @@
+shader lc_rgb_to_float(
+    color input = color(0, 0, 0),
+    string mode = "average"
+    [[string widget = "popup",string options = "r|g|b|min|max|average|sum|perceptual"]],
+    output float outFloat = 0.0)
+{
+	if(mode=="r")
+		outFloat = input[0];
+	else if(mode=="g")
+		outFloat = input[1];
+	else if(mode=="b")
+		outFloat = input[2];
+	else if(mode=="min")
+		outFloat = min(min(input[0],input[1]),input[2]);
+	else if(mode=="max")
+		outFloat = max(max(input[0],input[1]),input[2]);
+	else if(mode=="average")
+		outFloat = (input[0]+input[1]+input[2])/3;
+	else if(mode=="sum")
+		outFloat = (input[0]+input[1]+input[2]);
+	else if(mode=="perceptual")
+		outFloat=0.2126*input[0] + 0.7152*input[1] + 0.0722*input[2];
+	else
+		outFloat=0.0;	  
+}

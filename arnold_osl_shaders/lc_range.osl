@@ -1,0 +1,19 @@
+shader lc_range(
+    color input = color(0, 0, 0),
+    float input_min = 0.0,
+    float input_max = 0.0,
+    float output_min = 0.0,
+    float output_max = 0.0,
+    int is_smoothstep = 0
+    [[string widget = "boolean"]],
+    output color outColor = color(0, 0, 0))
+{
+	color canonical = (input - color(input_min)) / (input_max - input_min);
+	if (is_smoothstep)
+	{
+	  canonical[0] = smoothstep(0.0, 1.0, canonical[0]);
+	  canonical[1] = smoothstep(0.0, 1.0, canonical[1]);
+	  canonical[2] = smoothstep(0.0, 1.0, canonical[2]);
+	}
+	outColor = canonical * (output_max - output_min) + color(output_min);
+}

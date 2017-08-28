@@ -1,0 +1,18 @@
+<args format="1.0">
+ <param name="mode" widget="popup">
+  <hintlist name="options">
+   <string value="linear_blending"/>
+   <string value="overlay_blending"/>
+   <string value="partial_derivative_blending"/>
+   <string value="whiteout_blending"/>
+   <string value="unreal_developer_network"/>
+   <string value="unity_blending"/>
+   <string value="reoriented_normal_mapping"/>   
+  </hintlist>
+  <help>
+  merge two normal maps in detail
+  </help>
+ </param>
+ <param name="input1"/>
+ <param name="input1"/>
+</args>

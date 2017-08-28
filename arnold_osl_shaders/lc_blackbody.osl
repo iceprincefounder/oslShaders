@@ -1,0 +1,18 @@
+shader lc_blackbody(
+    float temperature = 6500,
+    int normalized = 1
+    [[ string widget = "boolean"]],
+    float intensity = 1,
+    output color outColor = color(0, 0, 0))
+{
+	if(normalized)
+	{
+		color bbody = blackbody(temperature);
+	    outColor = normalize(bbody * intensity);	
+	}
+	else
+	{
+		color blackbody_color = blackbody(temperature);
+	    outColor = blackbody_color * intensity;		
+	}
+}

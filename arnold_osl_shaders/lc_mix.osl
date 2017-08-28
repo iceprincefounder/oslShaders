@@ -1,0 +1,19 @@
+shader lc_mix(
+    color input1 = color(0, 0, 0),
+    color input2 = color(0, 0, 0),
+    float blend = 0.5,
+    output color outColor = color(0, 0, 0))
+{
+	if(blend <= 0)
+	{
+		outColor = input2;
+	}
+	else if (blend >= 1.0)
+	{
+		outColor = input1;
+	}
+	else
+	{
+		outColor = mix(input1,input2,blend);
+	}
+}

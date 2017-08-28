@@ -1,0 +1,9 @@
+shader lc_user_data_int(
+    string attribute = "",
+    color default_value = color(0),
+    output color outColor = color(0))
+{
+	int flag = getattribute(attribute,outColor);
+	if(!flag)
+		outColor = default_value;
+}

@@ -1,0 +1,7 @@
+shader Example(
+    color input = color(0, 0, 0),
+    float exponent = 1,
+    output color outColor = color(0, 0, 0))
+{
+    outColor = pow(input, 1/exponent);
+}

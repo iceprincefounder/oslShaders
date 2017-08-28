@@ -1,0 +1,7 @@
+shader lc_cross(
+    vector input1 = color(0, 0, 0),
+    vector input2 = color(0, 0, 0),
+    output vector outVector = vector(0, 0, 0))
+{
+    outVector = cross(input1, input2);
+}

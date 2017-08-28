@@ -1,0 +1,6 @@
+# Arnold MetaData File 
+[node lc_reciprocal]
+	maya.name STRING "lc_reciprocal"
+	maya.id INT 0x70000022
+	maya.classification STRING "utility/lc_shaders"
+	desc STRING "LCA Math Shader Library" 

@@ -1,0 +1,7 @@
+shader lc_multiply(
+    color input1 = color(0, 0, 0),
+    color input2 = color(0, 0, 0),
+    output color outColor = color(0, 0, 0))
+{
+    outColor = input1*input2;
+}

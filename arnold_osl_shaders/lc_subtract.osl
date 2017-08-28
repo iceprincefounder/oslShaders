@@ -1,0 +1,7 @@
+shader lc_subtract(
+    color input1 = color(1, 1, 1),
+    color input2 = color(1, 1, 1),
+    output color outColor = color(0,0,0))
+{
+	outColor = input1 - input2;
+}

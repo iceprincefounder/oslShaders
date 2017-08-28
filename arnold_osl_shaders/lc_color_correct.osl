@@ -1,0 +1,47 @@
+shader lc_color_correct(
+   color input = color(1,1,1),
+   float hue_shift = 0.0,
+   float saturation = 1.0,
+   float brighten = 0.0,
+   float contrast = 1.0,
+   float contrast_pivot = 0.18,
+   float exposure = 0.0,
+   float gain = 1.0,
+   float gamma = 1.0,
+   output color outColor = color(0, 0, 0))
+{
+   color result = input;
+   if (hue_shift != 0.0 || saturation != 1.0)
+   {
+      color hsl = transformc("rgb","hsl",result);
+
+      // apply hue, keep it in 0..1
+      hsl[0] += hue_shift;
+      hsl[0] = hsl[0] - floor(hsl[0]);
+      
+      // apply saturation
+      hsl[1] *= saturation;
+      result = transformc("hsl","rgb",hsl);
+   }
+   
+   // apply contrast
+   if (contrast != 1.0)
+   {
+      result = (result - color(contrast_pivot)) * contrast + color(contrast_pivot);
+   }
+   
+   if (brighten != 0.0)
+      result += brighten;
+   
+   if (exposure != 0.0)
+      result *= pow(2.0, exposure);
+
+   if (gain != 1.0)
+      result *= gain;
+   
+   if (gamma != 1.0)
+      result = pow(result, 1/gamma);
+
+   outColor = result;
+
+}

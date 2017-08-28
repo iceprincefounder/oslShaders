@@ -1,0 +1,17 @@
+shader lc_length(
+    vector input = vector(0, 0, 0),
+    string mode = "euclidian"
+    [[string widget = "popup",string options = "manhattan|euclidian|quadrance"]],
+    output float outFloat = 0)
+{
+	float result;
+	if (mode == "manhattan")
+		result = abs(input[0]) + abs(input[1]) + abs(input[2]);
+	else if (mode == "euclidian")
+		result = length(input);
+	else if (mode == "quadrance")
+		result = dot(input,input);
+	else
+		result = 0;
+	outFloat = result;
+}

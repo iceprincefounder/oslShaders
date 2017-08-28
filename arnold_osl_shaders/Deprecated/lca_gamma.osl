@@ -1,0 +1,7 @@
+shader lca_gamma(
+    color Cin = color(0, 0, 0),
+    float exponent = 1,
+    output color Cout = color(0, 0, 0))
+{
+    Cout = pow(Cin, 1/exponent);
+}

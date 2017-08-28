@@ -1,0 +1,83 @@
+vector canonical_in(color input)
+{
+	color temp = input*2 - color(1);
+	vector result = vector(temp[0],temp[1],temp[2]);
+	return result;
+}
+vector canonical_out(vector input)
+{
+	vector temp = normalize(input);
+	vector result = (temp+vector(1))*0.5;
+	return result;
+}
+float overlay(float x, float y)
+{
+	if (x < 0.5)
+	    return 2.0*x*y;
+	else
+	    return 1.0 - 2.0*(1.0 - x)*(1.0 - y);
+}
+
+shader lc_normal_blend(
+    string mode = "reoriented_normal_mapping"
+    [[string widget = "popup",string options = 
+    "linear_blending|overlay_blending|partial_derivative_blending|whiteout_blending|unreal_developer_network|unity_blending|reoriented_normal_mapping"]],
+    color normal_map1 = color(0,0,1),
+    color normal_map2 = color(0,0,1),
+    output vector outVector = vector(0))
+{
+	if(mode=="linear_blending")
+	{
+		vector sum = canonical_in(normal_map1)+canonical_in(normal_map2);
+		outVector = canonical_out((sum));
+	}
+	else if(mode=="overlay_blending")
+	{
+		vector n1 = normal_map1;
+		vector n2 = normal_map2;
+		vector result = vector(overlay(n1[0],n2[0]),overlay(n1[1],n2[1]),overlay(n1[2],n2[2]));
+		outVector = normalize(result);
+	}
+	else if(mode=="partial_derivative_blending")
+	{
+		vector n1 = normal_map1;
+		vector n2 = normal_map2;
+		vector result = vector((n1[0]*n2[2]+n2[0]*n1[2]),(n1[1]*n2[2]+n2[1]*n1[2]),(n1[2]*n2[2]));
+		outVector = normalize(result);	
+	}
+	else if(mode=="whiteout_blending")
+	{
+		vector n1 = normal_map1;
+		vector n2 = normal_map2;
+		vector result = vector((n1[0]+n2[0]),(n1[1]+n2[1]),(n1[2]*n2[2]));
+		outVector = normalize(result);		
+	}
+	else if(mode=="unreal_developer_network")
+	{
+		vector n1 = normalize(normal_map1);
+		vector n2 = normalize(normal_map2);
+		outVector = normalize(vector(n1[0]+n2[0],n1[1]+n2[1],n1[2]));
+	}
+	else if(mode=="unity_blending")
+	{
+
+		vector n1 = normalize(normal_map1);
+		vector n2 = normalize(normal_map2);
+		vector nBasis0 = vector(n1[2],n1[1],n1[0]);
+		vector nBasis1 = vector(n1[0],n1[2],n1[1]);
+		vector nBasis2 = vector(n1[0],n1[1],n1[2]);
+		vector result = n2[0]*nBasis0+n2[1]*nBasis1+n2[2]*nBasis2;
+		outVector = normalize(result);	
+	}
+	else if(mode=="reoriented_normal_mapping")
+	{
+		vector n1 = normalize(normal_map1)*vector(2,2,2)+vector(-1,-1,0);
+		vector n2 = normalize(normal_map2)*vector(-2,-2,2)+vector(1,1,-1);
+		vector result = n1*dot(n1,n2)/n1[2]-n2;
+		outVector = canonical_out(result);
+	}
+	else
+	{
+		printf("ERROR");
+	}
+}

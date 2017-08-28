@@ -1,0 +1,6 @@
+shader lc_abs(
+    color input = color(0, 0, 0),
+    output color outColor = color(0, 0, 0))
+{
+    outColor = abs(input);
+}

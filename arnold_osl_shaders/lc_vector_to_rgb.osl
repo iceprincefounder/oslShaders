@@ -1,0 +1,22 @@
+shader lc_vector_to_rgb(
+    vector input = vector(1),
+    string mode = "raw"
+    [[string widget = "popup",string options = "raw|normalized|canonical"]],
+    output color outColor = color(0))
+{
+	if(mode == "raw")
+		outColor = color(input[0],input[1],input[2]);
+	else if(mode == "normalized")
+	{
+		vector input_normalized = normalize(input);
+		outColor = color(input_normalized[0],input_normalized[1],input_normalized[2]);	
+	}
+	else if(mode == "canonical")
+	{
+		vector input_normalized = normalize(input);
+		color tempColor = color(input_normalized[0],input_normalized[1],input_normalized[2]);
+		outColor = (tempColor+color(1))*0.5;	
+	}
+	else
+		outColor = color(1);
+}

@@ -1,0 +1,9 @@
+shader lc_user_data_float(
+    string attribute = "",
+    float default_value = 0.0,
+    output float outFloat = 0.0)
+{
+	int flag = getattribute(attribute,outFloat);
+	if(!flag)
+		outFloat = default_value;
+}

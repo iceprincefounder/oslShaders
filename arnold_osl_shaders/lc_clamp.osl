@@ -1,0 +1,8 @@
+shader lc_cache(
+	color input = color(0,0,0),
+	float min_value = 0,
+	float max_value = 1,
+    output color outColor = color(0, 0, 0))
+{
+	outColor = clamp(input,min_value,max_value);
+}

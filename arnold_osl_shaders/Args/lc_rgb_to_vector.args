@@ -1,0 +1,16 @@
+<args format="1.0">
+ <help>
+  Convert a color to a vector using one of a couple of methods.
+ </help>
+ <param name="input" widget="color"/>
+ <param name="mode" widget="popup">
+  <hintlist name="options">
+   <string value="raw"/>
+   <string value="canonical"/>
+   <string value="normalized"/>
+  </hintlist>
+  <help>
+   Conversion mode; raw is r,g,b components become x,y,z vector components with no modification, while canonical converts a color from a normal-map space (0 to 1 in  each component) to a standard vector space (-1 to 1 in each component).
+  </help>
+ </param>
+</args>

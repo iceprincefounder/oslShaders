@@ -1,0 +1,21 @@
+<args format="1.0">
+ <help>
+  Convert a color to a single value using a common method.
+ </help>
+ <param name="input" widget="color"/>
+ <param name="mode" widget="popup">
+  <hintlist name="options">
+   <string value="r"/>
+   <string value="g"/>
+   <string value="b"/>
+   <string value="min"/>
+   <string value="max"/>
+   <string value="average"/>
+   <string value="sum"/>
+   <string value="perceptual"/>
+  </hintlist>
+  <help>
+   Conversion mode.  R is take the red channel, G the green channel, and B the blue channel.  Min returns the smallest of the r,g,b color components, while max returns the largest of them.  Average is (r+g+b)/3, sum is r+g+b.  Perceptual is the sRGB perceptual luminance of the color.
+  </help>
+ </param>
+</args>

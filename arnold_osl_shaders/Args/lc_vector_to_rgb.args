@@ -1,0 +1,16 @@
+<args format="1.0">
+ <help>
+  Convert a vector to a color using a common method.
+ </help>
+ <param name="input"/>
+ <param name="mode" widget="popup">
+  <hintlist name="options">
+   <string value="raw"/>
+   <string value="normalized"/>
+   <string value="canonical"/>
+  </hintlist>
+  <help>
+   Conversion mode; raw is take each x,y,z component and make them the r,g,b components respectively with no modification.  Normalized is to normalize the vector to unit length first.  Canonical is to convert from normalized vector range (-1 to 1 in each component) to normal-map space (0 to 1 in each component).
+  </help>
+ </param>
+</args>

@@ -1,0 +1,9 @@
+shader lc_user_data_string(
+    string attribute = "",
+    string default_value = "",
+    output string outString = "")
+{
+	int flag = getattribute(attribute,outString);
+	if(!flag)
+		outString = default_value;
+}

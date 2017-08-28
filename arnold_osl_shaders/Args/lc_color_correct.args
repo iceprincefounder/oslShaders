@@ -1,0 +1,48 @@
+<args format="1.0">
+ <param name="input" widget="color"/>
+ <param slidermin="-1.0" name="hue_shift" min="-1.0" slider="True" slidercenter="0.0">
+  <help>
+   Hue change (corresponding to HSV or HSL color models). Zero is no change, while 1 and -1 wrap completely around back to the same hue.
+  </help>
+ </param>
+ <param name="saturation" slider="True">
+  <help>
+   Saturation multiplier; greater than 1 to increase saturation, less than 1 to decrease it.
+  </help>
+ </param>
+ <param name="brighten" min="-1.0" slidermin="-1.0" slider="True">
+  <help>
+   Brightness change; adds to overall brightness.  Greater than zero will  increase brightness, less than zero to decrease it.
+  </help>
+ </param>
+ <param name="contrast" min="0.001" max="10.0" slidermin="0" slidermax="10.0" slider="True">
+  <help>
+   Contrast multiplier; 1 means no change, less than 1 to reduce contrast around the pivot, and greater than 1 to increase contrast around the pivot.
+  </help>
+ </param>
+ <param name="contrast_pivot">
+  <hintdict name="conditionalVisOps">
+   <string value="notEqualTo" name="conditionalVisOp"/>
+   <string value="../contrast" name="conditionalVisPath"/>
+   <string value="1" name="conditionalVisValue"/>
+  </hintdict>
+  <help>
+   Center value that will not change with contrast adjustments.
+  </help>
+ </param>
+ <param name="exposure" slidermin="-10.0" slidermax="10.0" slider="True">
+  <help>
+   Stop-exposure modifier, multiplies the color by pow(2, exposure).  An exposure of 1 is a full stop brighter, and an exposure of -1 is a full stop dimmer.
+  </help>
+ </param>
+ <param name="gain" slider="True">
+  <help>
+   Multiplier on the color value.
+  </help>
+ </param>
+ <param name="gamma" min="0.001" max="3.0" slidermin="0" slidermax="3.0" slider="True">
+  <help>
+   Gamma value.  Typical values here are 1, 1.8, 2.2, and 2.4.  A gamma of 1 indicates no change.
+  </help>
+ </param>
+</args>

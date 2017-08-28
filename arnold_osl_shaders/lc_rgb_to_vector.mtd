@@ -1,0 +1,6 @@
+# Arnold MetaData File 
+[node lc_rgb_to_vector]
+	maya.name STRING "lc_rgb_to_float"
+	maya.id INT 0x70000024
+	maya.classification STRING "utility/lc_shaders"
+	desc STRING "LCA Math Shader Library" 

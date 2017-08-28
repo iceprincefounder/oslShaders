@@ -1,0 +1,7 @@
+shader lc_pow(
+    color base = color(0, 0, 0),
+    color exponent = color(0, 0, 0),
+    output color outColor = color(0, 0, 0))
+{
+	outColor = pow(base,exponent);
+}

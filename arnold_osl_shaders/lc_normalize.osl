@@ -1,0 +1,6 @@
+shader lc_normalize(
+    vector input = vector(0, 0, 0),
+    output vector outVector = color(0, 0, 0))
+{
+    outVector = normalize(input);
+}

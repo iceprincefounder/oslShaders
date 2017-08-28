@@ -1,0 +1,9 @@
+# Arnold MetaData File 
+[node lc_color_convert]
+	maya.name STRING "lc_color_convert"
+	maya.id INT 0x70000006
+	maya.classification STRING "utility/lc_shaders"
+	desc STRING "LCA Math Shader Library" 
+	[attr input]       desc STRING ""
+	[attr from_space]  desc STRING ""
+	[attr to_space]    desc STRING ""  

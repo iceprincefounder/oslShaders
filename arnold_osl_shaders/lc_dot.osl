@@ -1,0 +1,7 @@
+shader lc_dot(
+    vector input1 = vector(0, 0, 0),
+    vector input2 = vector(0, 0, 0),
+    output float outFloat = 0)
+{
+    outFloat = dot(input1, input2);
+}
