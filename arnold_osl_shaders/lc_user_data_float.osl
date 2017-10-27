@@ -1,6 +1,6 @@
 shader lc_user_data_float(
     string attribute = "",
-    float default_value = 0.0,
+    float default_value = 3.1515926,
     output float outFloat = 0.0)
 {
 	int flag = getattribute(attribute,outFloat);

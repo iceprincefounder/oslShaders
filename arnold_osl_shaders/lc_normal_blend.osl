@@ -1,3 +1,5 @@
+#include "common/alshaders.h"
+
 vector canonical_in(color input)
 {
 	color temp = input*2 - color(1);
@@ -22,8 +24,8 @@ shader lc_normal_blend(
     string mode = "reoriented_normal_mapping"
     [[string widget = "popup",string options = 
     "linear_blending|overlay_blending|partial_derivative_blending|whiteout_blending|unreal_developer_network|unity_blending|reoriented_normal_mapping"]],
-    color normal_map1 = color(0,0,1),
-    color normal_map2 = color(0,0,1),
+    color normal_map1 = color(0.5,0.5,1),
+    color normal_map2 = color(0.5,0.5,1),
     output vector outVector = vector(0))
 {
 	if(mode=="linear_blending")
@@ -61,8 +63,8 @@ shader lc_normal_blend(
 	else if(mode=="unity_blending")
 	{
 
-		vector n1 = normalize(normal_map1);
-		vector n2 = normalize(normal_map2);
+		vector n1 = normal_map1;
+		vector n2 = normal_map2;
 		vector nBasis0 = vector(n1[2],n1[1],n1[0]);
 		vector nBasis1 = vector(n1[0],n1[2],n1[1]);
 		vector nBasis2 = vector(n1[0],n1[1],n1[2]);
@@ -71,8 +73,8 @@ shader lc_normal_blend(
 	}
 	else if(mode=="reoriented_normal_mapping")
 	{
-		vector n1 = normalize(normal_map1)*vector(2,2,2)+vector(-1,-1,0);
-		vector n2 = normalize(normal_map2)*vector(-2,-2,2)+vector(1,1,-1);
+		vector n1 = normal_map1*vector(2,2,2)+vector(-1,-1,0);
+		vector n2 = normal_map2*vector(-2,-2,2)+vector(1,1,-1);
 		vector result = n1*dot(n1,n2)/n1[2]-n2;
 		outVector = canonical_out(result);
 	}

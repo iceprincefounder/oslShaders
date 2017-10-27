@@ -1,5 +1,5 @@
 # Arnold MetaData File 
-[node lc_rgb_to_vector]
+[node lc_subtract]
 	maya.name STRING "lc_subtract"
 	maya.id INT 0x70000025
 	maya.classification STRING "utility/lc_shaders"

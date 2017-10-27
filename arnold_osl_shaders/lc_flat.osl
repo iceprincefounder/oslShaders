@@ -1,0 +1,6 @@
+shader lc_flat(
+	color pure_color = color(1),
+	output color outColor = color(1))
+{
+	outColor = pure_color;
+}

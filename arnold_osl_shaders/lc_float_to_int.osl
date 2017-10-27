@@ -1,0 +1,18 @@
+shader lc_float_to_int(
+    float input = 0.0,
+    string mode = "round", 
+    output int outInt = 0)
+{
+	float result = 0.0;
+	if (mode == "round")
+		outInt = (int)round(input);
+	else if (mode == "trunc")
+		outInt = (int)trunc(input);
+	else if (mode == "floor")
+		outInt = (int)floor(input);
+	else if (mode == "ceil")
+		outInt = (int)ceil(input);
+	else
+		outInt = (int)result;
+
+}

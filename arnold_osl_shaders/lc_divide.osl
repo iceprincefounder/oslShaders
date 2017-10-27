@@ -1,7 +1,7 @@
 shader lc_divide(
-    color input1 = color(0, 0, 0),
-    color input2 = color(0, 0, 0),
-    output color outColor = color(0, 0, 0))
+    color input1 = color(1, 1, 1),
+    color input2 = color(1, 1, 1),
+    output color outColor = color(1, 1, 1))
 {
     outColor = cross(input1, input2);
 }

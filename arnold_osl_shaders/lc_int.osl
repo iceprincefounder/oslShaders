@@ -1,0 +1,6 @@
+shader lc_int(
+	int input = 0,
+	output int outInt = 0)
+{
+	outInt = input;
+}

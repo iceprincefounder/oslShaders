@@ -1,0 +1,43 @@
+struct colorA
+{
+	color RGB;
+	float A;
+};
+
+shader lc_image(
+    string filename = "",
+    string interpVal = "smartcubic",
+    string swrap = "default",
+    string twrap = "default",
+    float swidth = 1.0,
+    float twidth = 1.0,
+    float blurVal = 0.0,
+    int firstchannel = 0,
+    float fill = 0.0,
+    int enableMissingColor = 0,
+    color missingcolor = color(1),
+    float missingalpha = 1,
+    float alphaVal = 1.0,
+    output color outColor = 0)
+{
+	float alpha = 1;
+	float sg_u = u;
+	float sg_v = v;
+	if(missingcolor)
+	{
+	    outColor = texture(filename, sg_u, sg_v, "alpha", alpha,"blur", blurVal,"interp",interpVal,
+	    	"swrap",swrap,"twrap",twrap,
+	    	"swidth",swidth,"twidth",twidth,
+	    	"firstchannel",firstchannel,
+	    	"fill",fill,
+	    	"missingcolor",missingcolor,"missingalpha",missingalpha);		
+	}
+	else
+	{
+	    outColor = texture(filename, sg_u, sg_v, "alpha", alpha,"blur", blurVal,"interp",interpVal,
+	    	"swrap",swrap,"twrap",twrap,
+	    	"swidth",swidth,"twidth",twidth,
+	    	"firstchannel",firstchannel,				
+	    	"fill",fill);
+	}
+}

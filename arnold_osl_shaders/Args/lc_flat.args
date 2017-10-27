@@ -1,0 +1,3 @@
+<args format="1.0">
+<param name="pure_color" label="Pure Color" widget="color"/>
+</args>

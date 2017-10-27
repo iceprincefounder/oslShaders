@@ -1,0 +1,46 @@
+#include <stdosl.h>
+#include <oslutil.h>
+
+#include "common/alshaders.h"
+
+shader lc_remap_color(
+    color input = color(0, 0, 0),
+    float gammaVal = 1.0,
+    float saturationVal = 1.0,
+    float hueOffset = 0.0,
+    float contrastVal = 1.0,
+    float contrastPivot = 0.18,
+    float gainVal = 1.0,
+    float exposureVal = 0.0,
+    float maskVal = 1.0,
+    output color outColor = color(0, 0, 0))
+{
+	color result = input;
+	if(maskVal > 0.0)
+	{
+        // hue
+        if (hueOffset != 0.0) 
+        {
+            color hsv = al_rgb2hsv(result);
+            hsv[0] += hueOffset;
+            result = al_hsv2rgb(hsv);
+        }		
+        // saturation
+        if (saturationVal != 1.0) {
+            float l = al_luminance(result);
+            result = lerp(color(l), result, saturationVal);
+        }
+        // contrast
+        if (contrastVal != 1.0) 
+        {
+            result = al_contrast(result, contrastVal, contrastPivot);
+        }
+        // gain and exposure
+        result = result * pow(2.0, exposureVal) * gainVal;
+        // mask
+        if (maskVal < 1.0) {
+            result = lerp(input, result, maskVal);
+        }        
+	}
+	outColor = result;
+}

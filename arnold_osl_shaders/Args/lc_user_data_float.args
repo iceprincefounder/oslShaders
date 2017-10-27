@@ -1,0 +1,4 @@
+<args format="1.0">
+<param name="attribute" label="Attribute"/>
+<param name="default_value" label="Default Value"/>
+</args>

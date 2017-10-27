@@ -2,8 +2,8 @@
  <help>
   Convert a color to a single value using a common method.
  </help>
- <param name="input" widget="color"/>
- <param name="mode" widget="popup">
+ <param name="input" label="Input" widget="color"/>
+ <param name="mode" label="Mode" widget="popup">
   <hintlist name="options">
    <string value="r"/>
    <string value="g"/>

@@ -1,0 +1,60 @@
+#include <stdosl.h>
+#include <oslutil.h>
+
+#include "common/alshaders.h"
+float remap_float(float input, float inputMin, float inputMax, float contrastVal, 
+				float contrastPivot, float biasVal, float gainVal,
+			    float outputMin, float outputMax, int clampEnable, 
+			    int threshold, float clampMin, float clampMax)
+{
+	float f = (input - inputMin) / (inputMax - inputMin);
+	f = al_contrast(f, contrastVal, contrastPivot);
+	f = al_biasandgain(f, biasVal, gainVal);
+	f = lerp(outputMin, outputMax, f);
+	if (clampEnable) {
+	    f = min(clampMax, f);
+	    f = max(clampMin, f);
+	    if (threshold)
+	        f = (f - clampMin) / (clampMax - clampMin);
+	}
+	return f;
+}
+
+shader lc_remap_float(
+    float input = 0.0,
+    float RMPinputMin = 0.0,                                       
+	float RMPinputMax = 1.0,                                       
+	float RMPcontrast = 1.0,                                       
+	float RMPcontrastPivot = 0.5,                                  
+	float RMPbias = 0.5,                                           
+	float RMPgain = 0.5,                                           
+	float RMPoutputMin = 0.0,                                      
+	float RMPoutputMax = 1.0,
+    int RMPclampEnable = 1,  
+    int RMPthreshold = 0,
+    float RMPclampMin = 0.0,
+    float RMPclampMax = 1.0,       
+    float mask = 1,
+    output float outFloat = 0.0)
+{
+    float result = input;
+    if (mask > 0.0) 
+    {
+    	float rx;
+		rx = remap_float(input,
+			RMPinputMin,
+			RMPinputMax,
+			RMPcontrast,
+			RMPcontrastPivot,
+			RMPbias,
+			RMPgain,
+			RMPoutputMin,
+			RMPoutputMax,
+			RMPclampEnable,
+			RMPthreshold,
+			RMPclampMin,
+			RMPclampMax);
+        result = lerp(input, rx, mask);
+    }
+    outFloat = result;
+}

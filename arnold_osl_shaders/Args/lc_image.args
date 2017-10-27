@@ -1,0 +1,42 @@
+<args format="1.0">
+<param sequenceListing="True" name="filename" label="File Name" widget="fileInput"/>
+<param name="interpVal" label="Filter" widget="popup">
+	<hintlist name="options">
+		<string value="smartcubic"/>
+		<string value="cubic"/>
+		<string value="linear"/>
+		<string value="closest"/>
+	</hintlist>
+</param>
+<param name="blurVal" label="Blur" slider="True" slidermin="0.0" slidermax="0.1"/>
+<param name="firstchannel" label="First Channel"/>
+<param name="fill" label="Fill"/>
+<param name="enableMissingColor" label="Enable Missing Color" widget="checkBox"/>
+<param name="missingcolor" label="Missing Color"/>
+<param name="missingalpha" label="Missing Alpha"/>
+<param name="alphaVal" label="Alpha" slider="True"/>
+<page name="Wrap">
+	<param name="swrap" label="sWrap" widget="popup">
+		<hintlist name="options">
+			<string value="default"/>
+			<string value="back"/>
+			<string value="periodic"/>
+			<string value="clamp"/>
+			<string value="mirror"/>
+		</hintlist>
+	</param>
+	<param name="twrap" label="tWrap" widget="popup">
+		<hintlist name="options">
+			<string value="default"/>
+			<string value="back"/>
+			<string value="periodic"/>
+			<string value="clamp"/>
+			<string value="mirror"/>
+		</hintlist>
+	</param>
+</page>
+<page name="Width">
+	<param name="swidth" label="sWidth"/>
+	<param name="twidth" label="tWidth"/>
+</page>
+</args>

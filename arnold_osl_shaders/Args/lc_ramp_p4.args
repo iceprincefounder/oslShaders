@@ -1,0 +1,34 @@
+<args format="1.0">
+ <param name="p_type" label="Type" widget="mapper">
+  <hintdict name="options">
+   <string value="u" name="U Axis"/>
+   <string value="v" name="V Axis"/>
+   <string value="diagonal" name="Diagonal"/>
+   <string value="radial" name="Radial"/>
+   <string value="circular" name="Circular"/>
+   <string value="box" name="Box"/>
+   <string value="uv" name="UV"/>
+   <string value="fourcorner" name="Four Corner"/>
+   <string value="tartan" name="Tartan"/>
+  </hintdict>
+ </param>
+ <param name="p_interp" label="Interpolation" widget="mapper">
+  <hintdict name="options">
+   <string value="none" name="None"/>
+   <string value="linear" name="Linear"/>
+   <string value="exponentialup" name="Exponential Up"/>
+   <string value="exponentialdown" name="Exponential Down"/>
+   <string value="smooth" name="Smooth"/>
+   <string value="bump" name="Bump"/>
+   <string value="spike" name="Spike"/>
+  </hintdict>
+ </param>
+<param name="p_positions_1" label="Position 1" slider="True"/>
+<param name="p_positions_2" label="Position 2" slider="True"/>
+<param name="p_positions_3" label="Position 3" slider="True"/>
+<param name="p_positions_4" label="Position 4" slider="True"/>
+<param name="p_colors_1" label="Color 1" widget="color"/>
+<param name="p_colors_2" label="Color 2" widget="color"/>
+<param name="p_colors_3" label="Color 3" widget="color"/>
+<param name="p_colors_4" label="Color 4" widget="color"/>
+</args>

@@ -1,0 +1,4 @@
+<args format="1.0">
+<param name="input1" label="Input 1"/>
+<param name="input2" label="Input 2"/>
+</args>

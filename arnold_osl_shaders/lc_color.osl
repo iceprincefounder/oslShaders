@@ -1,0 +1,6 @@
+shader lc_color(
+	color input = color(0),
+	output color outColor = color(0))
+{
+	outColor = input;
+}

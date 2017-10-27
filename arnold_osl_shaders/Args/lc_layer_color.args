@@ -1,0 +1,259 @@
+<args format="1.0">
+<param name="clamp_result" label="Clamp" widget="checkBox"/>
+<page name="Layer 1">
+	<param name="layer1_enabled" label="Enabled" widget="checkBox"/>
+	<param name="layer1" label="Input" widget="color"/>
+	<param name="layer1_alpha" label="Alpha" slider="True"/>
+	<param name="layer1_blend" label="Mode" widget="popup">
+		<hintlist name="options">
+			<string value="Normal"/>
+			<string value="Lighten"/>
+			<string value="Darken"/>
+			<string value="Multiply"/>
+			<string value="Average"/>
+			<string value="Add"/>
+			<string value="Subtract"/>
+			<string value="Difference"/>
+			<string value="Negation"/>
+			<string value="Exclusion"/>
+			<string value="Screen"/>
+			<string value="Overlay"/>
+			<string value="SoftLight"/>
+			<string value="HardLight"/>
+			<string value="ColorDodge"/>
+			<string value="ColorBurn"/>
+			<string value="LinearLight"/>
+			<string value="VividLight"/>
+			<string value="PinLight"/>
+			<string value="HardMix"/>
+			<string value="Reflect"/>
+			<string value="Glow"/>
+			<string value="Phoenix"/>
+		</hintlist>
+	</param>
+</page>
+<page name="Layer 2">
+	<param name="layer2_enabled" label="Enabled" widget="checkBox"/>
+	<param name="layer2" label="Input" widget="color"/>
+	<param name="layer2_alpha" label="Alpha" slider="True"/>
+	<param name="layer2_blend" label="Mode" widget="popup">
+		<hintlist name="options">
+			<string value="Normal"/>
+			<string value="Lighten"/>
+			<string value="Darken"/>
+			<string value="Multiply"/>
+			<string value="Average"/>
+			<string value="Add"/>
+			<string value="Subtract"/>
+			<string value="Difference"/>
+			<string value="Negation"/>
+			<string value="Exclusion"/>
+			<string value="Screen"/>
+			<string value="Overlay"/>
+			<string value="SoftLight"/>
+			<string value="HardLight"/>
+			<string value="ColorDodge"/>
+			<string value="ColorBurn"/>
+			<string value="LinearLight"/>
+			<string value="VividLight"/>
+			<string value="PinLight"/>
+			<string value="HardMix"/>
+			<string value="Reflect"/>
+			<string value="Glow"/>
+			<string value="Phoenix"/>
+		</hintlist>
+	</param>
+</page>
+<page name="Layer 3">
+	<param name="layer3_enabled" label="Enabled" widget="checkBox"/>
+	<param name="layer3" label="Input" widget="color"/>
+	<param name="layer3_alpha" label="Alpha" slider="True"/>
+	<param name="layer3_blend" label="Mode" widget="popup">
+		<hintlist name="options">
+			<string value="Normal"/>
+			<string value="Lighten"/>
+			<string value="Darken"/>
+			<string value="Multiply"/>
+			<string value="Average"/>
+			<string value="Add"/>
+			<string value="Subtract"/>
+			<string value="Difference"/>
+			<string value="Negation"/>
+			<string value="Exclusion"/>
+			<string value="Screen"/>
+			<string value="Overlay"/>
+			<string value="SoftLight"/>
+			<string value="HardLight"/>
+			<string value="ColorDodge"/>
+			<string value="ColorBurn"/>
+			<string value="LinearLight"/>
+			<string value="VividLight"/>
+			<string value="PinLight"/>
+			<string value="HardMix"/>
+			<string value="Reflect"/>
+			<string value="Glow"/>
+			<string value="Phoenix"/>
+		</hintlist>
+	</param>
+</page>
+<page name="Layer 4">
+	<param name="layer4_enabled" label="Enabled" widget="checkBox"/>
+	<param name="layer4" label="Input" widget="color"/>
+	<param name="layer4_alpha" label="Alpha" slider="True"/>
+	<param name="layer4_blend" label="Mode" widget="popup">
+		<hintlist name="options">
+			<string value="Normal"/>
+			<string value="Lighten"/>
+			<string value="Darken"/>
+			<string value="Multiply"/>
+			<string value="Average"/>
+			<string value="Add"/>
+			<string value="Subtract"/>
+			<string value="Difference"/>
+			<string value="Negation"/>
+			<string value="Exclusion"/>
+			<string value="Screen"/>
+			<string value="Overlay"/>
+			<string value="SoftLight"/>
+			<string value="HardLight"/>
+			<string value="ColorDodge"/>
+			<string value="ColorBurn"/>
+			<string value="LinearLight"/>
+			<string value="VividLight"/>
+			<string value="PinLight"/>
+			<string value="HardMix"/>
+			<string value="Reflect"/>
+			<string value="Glow"/>
+			<string value="Phoenix"/>
+		</hintlist>
+	</param>
+</page>
+<page name="Layer 5">
+	<param name="layer5_enabled" label="Enabled" widget="checkBox"/>
+	<param name="layer5" label="Input" widget="color"/>
+	<param name="layer5_alpha" label="Alpha" slider="True"/>
+	<param name="layer5_blend" label="Mode" widget="popup">
+		<hintlist name="options">
+			<string value="Normal"/>
+			<string value="Lighten"/>
+			<string value="Darken"/>
+			<string value="Multiply"/>
+			<string value="Average"/>
+			<string value="Add"/>
+			<string value="Subtract"/>
+			<string value="Difference"/>
+			<string value="Negation"/>
+			<string value="Exclusion"/>
+			<string value="Screen"/>
+			<string value="Overlay"/>
+			<string value="SoftLight"/>
+			<string value="HardLight"/>
+			<string value="ColorDodge"/>
+			<string value="ColorBurn"/>
+			<string value="LinearLight"/>
+			<string value="VividLight"/>
+			<string value="PinLight"/>
+			<string value="HardMix"/>
+			<string value="Reflect"/>
+			<string value="Glow"/>
+			<string value="Phoenix"/>
+		</hintlist>
+	</param>
+</page>
+<page name="Layer 6">
+	<param name="layer6_enabled" label="Enabled" widget="checkBox"/>
+	<param name="layer6" label="Input" widget="color"/>
+	<param name="layer6_alpha" label="Alpha" slider="True"/>
+	<param name="layer6_blend" label="Mode" widget="popup">
+		<hintlist name="options">
+			<string value="Normal"/>
+			<string value="Lighten"/>
+			<string value="Darken"/>
+			<string value="Multiply"/>
+			<string value="Average"/>
+			<string value="Add"/>
+			<string value="Subtract"/>
+			<string value="Difference"/>
+			<string value="Negation"/>
+			<string value="Exclusion"/>
+			<string value="Screen"/>
+			<string value="Overlay"/>
+			<string value="SoftLight"/>
+			<string value="HardLight"/>
+			<string value="ColorDodge"/>
+			<string value="ColorBurn"/>
+			<string value="LinearLight"/>
+			<string value="VividLight"/>
+			<string value="PinLight"/>
+			<string value="HardMix"/>
+			<string value="Reflect"/>
+			<string value="Glow"/>
+			<string value="Phoenix"/>
+		</hintlist>
+	</param>
+</page>
+<page name="Layer 7">
+	<param name="layer7_enabled" label="Enabled" widget="checkBox"/>
+	<param name="layer7" label="Input" widget="color"/>
+	<param name="layer7_alpha" label="Alpha" slider="True"/>
+	<param name="layer7_blend" label="Mode" widget="popup">
+		<hintlist name="options">
+			<string value="Normal"/>
+			<string value="Lighten"/>
+			<string value="Darken"/>
+			<string value="Multiply"/>
+			<string value="Average"/>
+			<string value="Add"/>
+			<string value="Subtract"/>
+			<string value="Difference"/>
+			<string value="Negation"/>
+			<string value="Exclusion"/>
+			<string value="Screen"/>
+			<string value="Overlay"/>
+			<string value="SoftLight"/>
+			<string value="HardLight"/>
+			<string value="ColorDodge"/>
+			<string value="ColorBurn"/>
+			<string value="LinearLight"/>
+			<string value="VividLight"/>
+			<string value="PinLight"/>
+			<string value="HardMix"/>
+			<string value="Reflect"/>
+			<string value="Glow"/>
+			<string value="Phoenix"/>
+		</hintlist>
+	</param>
+</page>
+<page name="Layer 8">
+	<param name="layer8_enabled" label="Enabled" widget="checkBox"/>
+	<param name="layer8" label="Input" widget="color"/>
+	<param name="layer8_alpha" label="Alpha" slider="True"/>
+	<param name="layer8_blend" label="Mode" widget="popup">
+		<hintlist name="options">
+			<string value="Normal"/>
+			<string value="Lighten"/>
+			<string value="Darken"/>
+			<string value="Multiply"/>
+			<string value="Average"/>
+			<string value="Add"/>
+			<string value="Subtract"/>
+			<string value="Difference"/>
+			<string value="Negation"/>
+			<string value="Exclusion"/>
+			<string value="Screen"/>
+			<string value="Overlay"/>
+			<string value="SoftLight"/>
+			<string value="HardLight"/>
+			<string value="ColorDodge"/>
+			<string value="ColorBurn"/>
+			<string value="LinearLight"/>
+			<string value="VividLight"/>
+			<string value="PinLight"/>
+			<string value="HardMix"/>
+			<string value="Reflect"/>
+			<string value="Glow"/>
+			<string value="Phoenix"/>
+		</hintlist>
+	</param>
+</page>
+</args>

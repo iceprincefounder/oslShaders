@@ -1,6 +1,6 @@
 shader lc_reciprocal(
-    color input = color(0, 0, 0),
-    output color outColor = color(0, 0, 0))
+    color input = color(1, 1, 1),
+    output color outColor = color(1, 1, 1))
 {
 	outColor = color(1,1,1)/input;
 }

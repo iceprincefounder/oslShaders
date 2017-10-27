@@ -1,0 +1,11 @@
+<args format="1.0">
+<param name="input" label="Input Float"/>
+<param name="mode" label="Mode" widget="popup">
+	<hintlist name="options">
+		<string value="round"/>
+		<string value="trunc"/>
+		<string value="floor"/>
+		<string value="ceil"/>
+	</hintlist>
+</param>
+</args>

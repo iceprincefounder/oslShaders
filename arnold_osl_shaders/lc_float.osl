@@ -1,0 +1,6 @@
+shader lc_float(
+	float input = 0.0,
+	output float outFloat = 0.0)
+{
+	outFloat = input;
+}

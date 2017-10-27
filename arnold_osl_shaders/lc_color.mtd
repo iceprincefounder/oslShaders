@@ -1,0 +1,7 @@
+# Arnold MetaData File 
+[node lc_color]
+	desc STRING "LCA Math Shader Library" 
+	maya.name STRING "lc_color"
+	maya.id INT 0x70000041
+	maya.classification STRING "utility/lc_shaders"
+

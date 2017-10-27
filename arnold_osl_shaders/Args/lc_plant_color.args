@@ -1,0 +1,8 @@
+<args format="1.0">
+ <param name="intputColor" label="Input Color"/>
+ <param name="color_data" label="Color Data"/>
+ <param name="color_default" label="Color Default"/>
+ <param name="intensity_data" label="Intensity Data"/>
+ <param name="intensity_default" label="Intensity Default" min="0.0" max="1" slidermin="0" slidermax="1" slider="True"/>
+
+</args>

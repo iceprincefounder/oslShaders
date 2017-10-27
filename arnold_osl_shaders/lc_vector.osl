@@ -1,0 +1,6 @@
+shader lc_vector(
+	vector input = vector(0),
+	output vector outVector = vector(0))
+{
+	outVector = input;
+}

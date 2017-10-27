@@ -1,0 +1,36 @@
+#include "common/alshaders.h"
+
+shader lc_plant_color(
+	color input = color(1,1,1),
+	//color green = color(0, 1, 0),
+	//color yellow = color(1, 1, 0),
+	float intensity = 0.0,
+	float minv = 0,
+	float maxv = 0,
+	int seed = 0,
+	string face_shell = "lca_face_shell",
+	string plant_area = "lca_plant_area",
+	string custom_userdata3 = "",
+	string custom_userdata4 = "",
+	output color outColor = color(0, 0, 0))
+{
+
+	float v_int = 0;
+	float v_value = 0;
+ 	int lca_face_shell;
+	int lca_pieces;
+	getattribute(face_shell,lca_face_shell);
+	getattribute("lca_pieces",lca_pieces);
+	float shell = lca_face_shell/(lca_pieces*1.0)+seed/100.0;
+
+	if((lca_face_shell+seed)%100 < intensity*100)
+	{
+	v_int = clamp((abs(noise("snoise",shell)*2)),0,1);
+	v_value = lerp(minv,maxv,v_int);
+	}
+
+	color tmp = al_rgb2hsv(input);
+	tmp[2] = tmp[2]+v_value;
+
+	outColor = clamp(al_hsv2rgb(tmp),color(0,0,0),color(1,1,1));
+}

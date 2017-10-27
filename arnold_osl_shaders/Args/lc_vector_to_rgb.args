@@ -2,8 +2,8 @@
  <help>
   Convert a vector to a color using a common method.
  </help>
- <param name="input"/>
- <param name="mode" widget="popup">
+ <param name="input" label="Input"/>
+ <param name="mode" label="Mode" widget="popup">
   <hintlist name="options">
    <string value="raw"/>
    <string value="normalized"/>

@@ -1,0 +1,7 @@
+shader lc_mod(
+	float input = 0.0,
+    float divisor = 1.0,
+    output float outFloat = 0.0)
+{
+    outFloat=fmod(input, divisor);
+}

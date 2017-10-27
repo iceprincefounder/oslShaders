@@ -1,6 +1,6 @@
 <args format="1.0">
 <param name="input" label="Input" widget="color"/>
-<param name="from_space" label="from_space" widget="popup">
+<param name="from_space" label="From Space" widget="popup">
 	<hintlist name="options">
 		<string value="RGB"/>
 		<string value="XYZ"/>
@@ -9,7 +9,7 @@
 		<string value="HSV"/>
 	</hintlist>
 </param>
-<param name="to_space" label="to_space" widget="popup">
+<param name="to_space" label="To Space" widget="popup">
 	<hintlist name="options">
 		<string value="RGB"/>
 		<string value="XYZ"/>

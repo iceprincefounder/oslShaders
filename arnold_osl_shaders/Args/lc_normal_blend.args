@@ -1,5 +1,5 @@
 <args format="1.0">
- <param name="mode" widget="popup">
+ <param name="mode" label="Mode" widget="popup">
   <hintlist name="options">
    <string value="linear_blending"/>
    <string value="overlay_blending"/>
@@ -13,6 +13,6 @@
   merge two normal maps in detail
   </help>
  </param>
- <param name="input1"/>
- <param name="input1"/>
+ <param name="input1" label="Normal Map1"/>
+ <param name="input1" label="Normal Map2"/>
 </args>

@@ -1,0 +1,8 @@
+shader lc_float_to_rgb(
+    float input1 = 0.0,
+    float input2 = 0.0,
+    float input3 = 0.0,
+    output color outColor = 0)
+{
+	outColor = color(input1,input2,input3);
+}

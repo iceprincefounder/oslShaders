@@ -1,5 +1,5 @@
 # Arnold MetaData File 
-[node lc_user_data_rgb]
+[node lc_user_data_string]
 	maya.name STRING "lc_user_data_string"
 	maya.id INT 0x70000029
 	maya.classification STRING "utility/lc_shaders"

@@ -1,0 +1,56 @@
+#include "common/alshaders.h"
+
+shader lc_jitter_color(
+	color input = color(1,1,1),
+	//color green = color(0, 1, 0),
+	//color yellow = color(1, 1, 0),
+	float intensity = 0.0,
+	float hue_min = 0,
+	float hue_max = 0,
+	float sat_min = 0,
+	float sat_max = 0,
+	float value_min = 0,
+	float value_max = 0,
+	int seed = 0,
+	string face_shell = "lca_face_shell",
+	string plant_area = "lca_plant_area",
+	string custom_userdata3 = "",
+	string custom_userdata4 = "",
+	output color outColor = color(0, 0, 0))
+{
+	float h_int = 0;
+	float h_value = 0;
+	float s_int = 0;
+	float s_value = 0;
+	float v_int = 0;
+	float v_value = 0;
+ 	int lca_face_shell;
+	int lca_pieces;
+	color tmp = al_rgb2hsv(input);
+	getattribute(face_shell,lca_face_shell);
+	getattribute("lca_pieces",lca_pieces);
+
+	if((lca_face_shell+seed)%100 < intensity*100)
+	{
+	h_int = noise("cell",(lca_face_shell*0.5+seed+3214));
+	h_value = lerp(hue_min,hue_max,h_int);
+
+	s_int = noise("cell",(lca_face_shell*2+seed+4238));
+	s_value = lerp(sat_min,sat_max,s_int);
+
+	v_int = noise("cell",(lca_face_shell+seed));
+	v_value = lerp(value_min,value_max,v_int);
+	}
+	//test value random
+	//outColor = color(h_value,s_value,v_value);
+	tmp[0] = tmp[0]+h_value;
+	tmp[1] = tmp[1]+s_value;
+	tmp[2] = tmp[2]+v_value;
+	outColor = clamp(al_hsv2rgb(tmp),color(0,0,0),color(1,1,1));
+	
+
+
+	//point asd = noise("cell",lca_face_shell);
+	//color tmpe = color(asd[0],asd[1],asd[2]);
+	//outColor = tmpe;
+}

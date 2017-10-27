@@ -1,0 +1,7 @@
+shader lc_modulo(
+	color input = color(0),
+    color divisor = color(1),
+    output color outColor = color(0))
+{
+    outColor=mod(input, divisor);
+}

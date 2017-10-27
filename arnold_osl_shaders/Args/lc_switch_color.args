@@ -1,0 +1,26 @@
+<args format="1.0">
+<param name="index" label="Index"/>
+<param name="input0" label="Input 0"/>
+<param name="input1" label="Input 1"/>
+<param name="input2" label="Input 2"/>
+<param name="input3" label="Input 3"/>
+<param name="input4" label="Input 4"/>
+<param name="input5" label="Input 5"/>
+<param name="input6" label="Input 6"/>
+<param name="input7" label="Input 7"/>
+<param name="input8" label="Input 8"/>
+<param name="input9" label="Input 9"/>
+<param name="input10" label="Input 10"/>
+<param name="input11" label="Input 11"/>
+<param name="input12" label="Input 12"/>
+<param name="input13" label="Input 13"/>
+<param name="input14" label="Input 14"/>
+<param name="input15" label="Input 15"/>
+<param name="input16" label="Input 16"/>
+<param name="input17" label="Input 17"/>
+<param name="input18" label="Input 18"/>
+<param name="input19" label="Input 19"/>
+<param name="input20" label="Input 20"/>
+<param name="threshold" label="Threshold" slider="True" slidermin="0.0" slidermax="1.0" slidercenter="0.5"/>
+<param name="smooth" label="Smooth Layers" widget="checkBox"/>
+</args>

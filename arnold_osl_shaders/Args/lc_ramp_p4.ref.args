@@ -1,0 +1,62 @@
+<args format="1.0">
+ <help>
+  Create a curve for remapping an RGB color input to the output curve. This shader can be useful for creating an arbitrary ramp curve.
+ </help>
+ <param help="Preset type of input to the ramp; custom uses the linked input parameter, the others compute an input value from the current UV." name="type" widget="mapper">
+  <hintdict name="options">
+   <int value="0" name="custom"/>
+   <int value="1" name="u"/>
+   <int value="2" name="v"/>
+   <int value="3" name="diagonal"/>
+   <int value="4" name="radial"/>
+   <int value="5" name="circular"/>
+   <int value="6" name="box"/>
+  </hintdict>
+ </param>
+ <param name="input"/>
+<!--
+ <param name="position" isDynamicArray="1" widget="sortableArray">
+  <help>
+   Float value from the input, corresponding to the same entry in the 
+   '
+   color
+   '
+   array. Note that each entry in the 
+   '
+   position
+   '
+   array should be greater than the previous one in value.
+  </help>
+ </param>
+ <param name="color" panelWidget="color" isDynamicArray="1" widget="dynamicArray">
+  <help>
+   Resulting RGB value for each corresponding entry in the 'position' array.  Must have the same number of entries as positions.
+  </help>
+ </param>
+-->
+ <param int="1" name="interpolation" isDynamicArray="1" widget="sortableArray">
+  <hintdict name="childHints">
+   <int value="1" name="int"/>
+  </hintdict>
+  <help>
+   Interpolation or curve type to fit to the position/value pairs.  Must have the same number of entries as positions.
+   For the Katana ramp widget, that means there should be two more entries than control points on the curve, e.g. if there
+   are 4 colors, there should be six interpolation entries.
+   <ul>
+    <li>
+     0: constant or step function
+    </li>
+    <li>
+     1: linear interpolation
+    </li>
+    <li>
+     2: Catmull-Rom curve
+    </li>
+    <li>
+     3: cubic curve (Fritsch-Carlson monotone cubic, essentially a hermite curve)
+    </li>
+   </ul>
+   Note that there can be differing interpolations between pairs, so if there were e.g. 5 pairs, there should be 5 different interpolations for what goes in betwen each pair (the last one is unused).
+  </help>
+ </param>
+</args>
